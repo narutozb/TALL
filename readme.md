@@ -4,7 +4,7 @@
 
 TALL = `TA` `L`earning `L`og
 
-[文档位置](resources)
+[查看文档](resources)
 
 | 编号          | 内容         |
 |-------------|------------|
