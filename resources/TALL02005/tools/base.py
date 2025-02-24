@@ -46,10 +46,13 @@ class ScriptJobManagerBase(metaclass=SingletonMeta):
 
     @classmethod
     def kill_jobs(cls):
-        print(f'{cls.__name__}:删除ScriptJobs')
         for idx, i in enumerate(cls.executed_job_list):
+            print(f'{cls.__name__}:删除已执行ScriptJobsID:{i}')
             cmds.scriptJob(kill=i)
             cls.executed_job_list.pop(idx)
+
+        print(f'{cls.__name__}:清除ScriptJobs列表')
+        cls.registration_script_job_list.clear()
 
     @classmethod
     def add_script_job_decorator(cls, *decorator_args, **decorator_kwargs):
