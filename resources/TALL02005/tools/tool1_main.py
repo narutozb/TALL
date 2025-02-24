@@ -3,12 +3,7 @@ from PySide2.QtCore import Qt
 from shiboken2 import wrapInstance
 from maya import OpenMayaUI as omui, cmds
 
-
-import importlib
-
 from tools.manager import CustomToolManager
-
-importlib.reload(CustomToolManager)
 
 # 全局变量，用来保存窗口实例
 window = None
@@ -74,4 +69,3 @@ def main_show_ui():
 
 if __name__ == '__main__':
     main_show_ui()
-
